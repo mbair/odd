@@ -1,0 +1,52 @@
+// Custom bootstrap variable overrides
+@import "bootstrap_variable_overrides";
+
+// Bootstrap and its default variables
+@import "bootstrap/bootstrap";
+
+// Your style
+@import "variables";
+@import "mixins";
+@import "general";
+@import "layout";
+@import "module";
+
+
+/* Sticky Footer Classes */
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+body {
+  background: $gray-100;
+  background: linear-gradient(to right, $gray-100, $gray-300);
+}
+
+a {
+    text-decoration: none;
+    transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+}
+
+footer {
+    a {
+        color: #ffffff;
+    }
+
+    a:hover {
+        color: lightgray;
+    }
+
+
+}
