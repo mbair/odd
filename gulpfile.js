@@ -22,7 +22,8 @@ gulp.task('vendor:js', function() {
     './node_modules/bootstrap/dist/js/*',
     './node_modules/jquery/dist/*',
     '!./node_modules/jquery/dist/core.js',
-    './node_modules/popper.js/dist/umd/popper.*'
+    './node_modules/popper.js/dist/umd/popper.*',
+    './node_modules/bootstrap-slider/dist/*'
   ])
     .pipe(gulp.dest('./assets/js/vendor'));
 });
@@ -47,7 +48,8 @@ gulp.task('vendor:build', function() {
   var jsStream = gulp.src([
     './assets/js/vendor/bootstrap.bundle.min.js',
     './assets/js/vendor/jquery.slim.min.js',
-    './assets/js/vendor/popper.min.js'
+    './assets/js/vendor/popper.min.js',
+    './assets/js/vendor/bootstrap-slider.min.js'
   ])
     .pipe(gulp.dest('./dist/assets/js/vendor'));
   var fontStream = gulp.src(['./assets/fonts/font-awesome/**/*.*']).pipe(gulp.dest('./dist/assets/fonts/font-awesome'));

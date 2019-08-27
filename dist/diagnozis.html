@@ -25,7 +25,7 @@
     <meta name="msapplication-TileImage" content="/assets/img/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Online Dental Diagnozis</title>
+    <title>Online Dental Diagnozis - Diagnozis</title>
 
     <!-- Icons for this template -->
     <link href="assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-sm navbar-dark bg-danger my-lg-5">
             
-            <a class="navbar-brand d-block d-sm-none" href="#">Online Dental Diagnozis</a>
+            <a class="navbar-brand d-block d-sm-none" href="./index.html">Online Dental Diagnozis</a>
         
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -88,10 +88,109 @@
         <div class="container text-center py-5">
             <div class="row justify-content-center">
                     
-                <div class="col-md-7">
-                    <h2 class="font-weight-bolder text-danger">Független szakértői vélemény</h2>
-                    <h3 class="font-weight-bold">E-páciensek részére</h3>
-                    <a class="btn btn-lg btn-danger text-uppercase mt-5 px-5 py-3 font-weight-bold" href="./diagnozis.html" role="button">Diagnózist kérek &raquo;</a>
+                <div class="col-md-7 text-left">
+
+                    <form class="needs-validation" novalidate>
+                        
+                        <!-- Név -->
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="becenev"><span class="text-danger text-bold">Név</span><br> Becenevet adok meg:</label>
+                                <input type="text" class="form-control" id="becenev" placeholder="Becenév" value="Laci" required>
+                                <div class="valid-feedback">
+                                Rendben
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-4 mb-3">
+                            <label for="vezeteknev">Teljes nevemet megadom:</label>
+                            <input type="text" class="form-control" id="vezeteknev" placeholder="Vezetéknév" value="" required>
+                            <div class="valid-feedback">
+                              Rendben
+                            </div>
+                          </div>
+                          <div class="col-md-4 mb-3">
+                            <label for="keresztnev">&nbsp;</label>
+                            <input type="text" class="form-control" id="keresztnev" placeholder="Keresztnév" value="" required>
+                            <div class="valid-feedback">
+                              Rendben
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Adatkezelés -->
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="adatkzeles">
+                                <label class="custom-control-label" for="adatkzeles">Elfogadom az adatkezelésben foglaltakat és egyetértek vele.</label>
+                                <div class="invalid-feedback">
+                                    El kell fogadnia, hogy tovább léphessen!
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- E-Mail -->
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="email">E-Mail cím:</label>
+                                <input type="text" class="form-control" id="email" placeholder="E-Mail" value="" required>
+                                <div class="valid-feedback">
+                                    Rendben
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Jelszó -->
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="jelszo">Jelszó:</label>
+                                <input type="text" class="form-control" id="jelszo" placeholder="Jelszó" value="" required>
+                                <div class="valid-feedback">
+                                    Rendben
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit -->
+                        <div class="form-row">
+                            <div class="col text-center">
+                                <a class="btn btn-danger text-uppercase mt-1 px-5 py-2 font-weight-bold text-white" type="submit" role="button" href="./problemam.html">Tovább</a>
+                            </div>
+                        </div>
+
+                        <!-- Állapot sáv -->
+                        <div class="progress mt-5">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">
+                                Alap adatok
+                            </div>
+                        </div>
+                        <div class="col text-center mb-5">
+                            Kitartás, még pár kattintás és küldheted a is a kérésed!
+                        </div>
+                    </form>
+                      
+                      <script>
+                      // Example starter JavaScript for disabling form submissions if there are invalid fields
+                      (function() {
+                        'use strict';
+                        window.addEventListener('load', function() {
+                          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                          var forms = document.getElementsByClassName('needs-validation');
+                          // Loop over them and prevent submission
+                          var validation = Array.prototype.filter.call(forms, function(form) {
+                            form.addEventListener('submit', function(event) {
+                              if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                              }
+                              form.classList.add('was-validated');
+                            }, false);
+                          });
+                        }, false);
+                      })();
+                      </script>
+
                 </div>
             </div>
         </div>
@@ -227,14 +326,6 @@
         </div>
     </div>
 
-
-    <!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/vendor/jquery.slim.min.js"></script>
-<script src="assets/js/vendor/popper.min.js"></script>
-<script src="assets/js/vendor/bootstrap.min.js"></script>
-<script src="assets/js/app.min.js"></script>
 
     
       
